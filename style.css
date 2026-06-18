@@ -1,0 +1,33 @@
+body{
+   background-color: aquamarine;
+   font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    width:"800px";
+    margin:20px auto;
+}
+table{
+    width:100%;
+    background-color: pink;
+    border-collapse: collapse;
+    border-color: brown;
+}
+td{
+    border: 2px solid #e8d0d0;
+    padding:35px;
+    text-align: center;
+    font-weight: bold;
+}
+input[type="text"]
+input[type="email"]
+input[type="password"]
+input[type="date"]
+select{
+    width: 170px;
+    height:25px;
+}
+input[type="submit"],
+input[type="Reset"] {
+    width: 70px;
+    height: 30px;
+}
