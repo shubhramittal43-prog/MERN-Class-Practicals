@@ -1,0 +1,80 @@
+body{
+
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+.container{
+
+    width:450px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0px 0px 15px black;
+
+}
+
+h1{
+
+    color:purple;
+}
+
+label{
+
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+
+}
+
+input{
+
+    width:90%;
+    padding:10px;
+    margin-top:8px;
+    border-radius:8px;
+    border:2px solid gray;
+    font-size:16px;
+
+}
+
+button{
+
+    margin-top:20px;
+    padding:12px 25px;
+    background:purple;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:darkmagenta;
+
+}
+
+#result{
+
+    margin-top:20px;
+    color:darkblue;
+
+}
+
+#zodiacImage{
+
+    margin-top:20px;
+    width:220px;
+    height:220px;
+    display:none;
+    border-radius:10px;
+    border:2px solid black;
+
+}
