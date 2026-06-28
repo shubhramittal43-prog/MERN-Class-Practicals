@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Zodiac Finder</title>
+
+    <link rel="stylesheet" href="astro.css">
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <div class="container">
+
+        <h1 class="title">
+            ✨ Zodiac Sign Finder ✨
+        </h1>
+
+        <p class="subtitle">
+            Discover your Zodiac Sign by entering your Birth Date and Month
+        </p>
+
+        <div class="card">
+
+            <button onclick="findZodiac()" class="btn">
+                Find My Zodiac
+            </button>
+
+        </div>
+
+        <div id="result" class="result">
+
+            <img id="zodiacImage" src="" alt="Zodiac Image">
+
+            <h2 id="zodiacName"></h2>
+
+            <p id="zodiacDates"></p>
+
+            <p id="zodiacDescription"></p>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+            🌙 Astrology Zodiac Finder | Made by Shubhra Mittal
+        </p>
+
+    </footer>
+
+    <script src="astro.js"></script>
+
+</body>
+</html>

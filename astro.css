@@ -1,0 +1,353 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#050816,#0d1b2a,#1b263b);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* Floating Stars */
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(#8ec5ff 1px, transparent 1px),
+    radial-gradient(#ffe082 1px, transparent 1px);
+
+    background-size:120px 120px,
+                    170px 170px,
+                    230px 230px;
+
+    animation:starsMove 60s linear infinite;
+    opacity:.35;
+    z-index:-1;
+}
+
+@keyframes starsMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-600px);
+    }
+
+}
+
+/* Main Container */
+
+.container{
+
+    width:90%;
+    max-width:700px;
+
+    margin:50px auto;
+
+    text-align:center;
+
+}
+
+/* Title */
+
+.title{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+    color:#ffd166;
+
+    animation:titleGlow 2s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+    from{
+
+        text-shadow:0 0 10px #ffd166;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 20px #ffd166,
+        0 0 40px #ff9f1c,
+        0 0 60px white;
+
+    }
+
+}
+
+/* Subtitle */
+
+.subtitle{
+
+    font-size:18px;
+
+    color:#d8e6ff;
+
+    margin-bottom:40px;
+
+}
+
+/* Glass Card */
+
+.card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 0 25px rgba(0,0,0,.5);
+
+}
+
+/* Button */
+
+.btn{
+
+    padding:15px 35px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(90deg,#ff6b6b,#ff9f43);
+
+    transition:.4s;
+
+    font-weight:bold;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+    0 0 15px #ff9f43,
+    0 0 30px #ff6b6b;
+
+}
+
+/* Result */
+
+.result{
+
+    margin-top:40px;
+
+    display:none;
+
+    animation:fadeIn .8s;
+
+    background:rgba(255,255,255,.08);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+/* Image */
+
+.result img{
+
+    width:220px;
+
+    height:220px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+    animation:floatImage 3s infinite alternate;
+
+}
+
+@keyframes floatImage{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/* Zodiac Name */
+
+#zodiacName{
+
+    font-size:36px;
+
+    color:#ffd166;
+
+    margin-bottom:10px;
+
+}
+
+/* Zodiac Dates */
+
+#zodiacDates{
+
+    font-size:18px;
+
+    color:#8ec5ff;
+
+    margin-bottom:15px;
+
+}
+
+/* Description */
+
+#zodiacDescription{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:white;
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Footer */
+
+footer{
+
+    text-align:center;
+
+    margin:50px 0 20px;
+
+    color:#d1d1d1;
+
+    font-size:15px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.title{
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    font-size:16px;
+
+}
+
+.card{
+
+    padding:30px;
+
+}
+
+.result img{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+#zodiacName{
+
+    font-size:28px;
+
+}
+
+.btn{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.title{
+
+    font-size:28px;
+
+}
+
+.result img{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+#zodiacDescription{
+
+    font-size:16px;
+
+}
+
+}
