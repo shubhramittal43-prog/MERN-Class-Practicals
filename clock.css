@@ -1,0 +1,354 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    background:#111111;
+
+    overflow:hidden;
+
+}
+
+/* Main Watch */
+
+.watch{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* Animated Ring */
+
+.ring{
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    animation:glow 3s ease-in-out infinite;
+
+
+}
+
+/* Rotating Border */
+
+.ring::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    padding:6px;
+
+    background:linear-gradient(
+        0deg,
+        #00b7ff,
+        transparent,
+        #00b7ff,
+        transparent,
+        #00b7ff
+    );
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+}
+
+/* Clock Body */
+
+.clock{
+
+    width:390px;
+    height:390px;
+
+    border-radius:50%;
+
+    background:#1b1b1b;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+    inset 0 0 20px rgba(255,255,255,.05),
+    0 0 40px rgba(0,0,0,.5);
+
+}
+
+/* Logo */
+
+.logo{
+
+    width:75px;
+    height:75px;
+
+    border-radius:50%;
+
+    background:#292929;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.logo i{
+
+    font-size:35px;
+
+    color:#00b7ff;
+
+}
+
+/* Heading */
+
+h2{
+
+    color:#f1f1f1;
+
+    font-size:26px;
+
+    margin-bottom:25px;
+
+    letter-spacing:2px;
+
+}
+
+/* Time */
+
+#timer{
+
+    font-size:52px;
+
+    color:#ffffff;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+}
+
+/* AM PM */
+
+#ampm{
+
+    color:#00b7ff;
+
+    margin-top:10px;
+
+    font-size:22px;
+
+}
+
+/* Day */
+
+#day{
+
+    margin-top:18px;
+
+    color:#cccccc;
+
+    font-size:24px;
+
+}
+
+/* Date */
+
+#date{
+
+    margin-top:10px;
+
+    color:#9d9d9d;
+
+    font-size:18px;
+
+}
+
+/* Ring Animation */
+
+@keyframes rotateRing{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+      TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.ring{
+
+    width:360px;
+    height:360px;
+
+}
+
+.clock{
+
+    width:325px;
+    height:325px;
+
+}
+
+.ring::before{
+
+background:linear-gradient(
+0deg,
+#bb00ff,
+transparent,
+#bb00ff,
+transparent,
+#bb00ff
+);
+
+}
+
+.logo i{
+
+color:#bb00ff;
+
+}
+
+#ampm{
+
+color:#bb00ff;
+
+}
+
+#timer{
+
+font-size:44px;
+
+}
+
+}
+
+/* ===========================
+       MOBILE
+=========================== */
+
+@media(max-width:600px){
+
+.ring{
+
+width:290px;
+height:290px;
+
+}
+
+.clock{
+
+width:255px;
+height:255px;
+
+}
+
+.ring::before{
+
+background:linear-gradient(
+0deg,
+#00ff66,
+transparent,
+#00ff66,
+transparent,
+#00ff66
+);
+
+}
+
+.logo{
+
+width:55px;
+height:55px;
+
+}
+
+.logo i{
+
+font-size:24px;
+color:#00ff66;
+
+}
+
+h2{
+
+font-size:18px;
+
+margin-bottom:15px;
+
+}
+
+#timer{
+
+font-size:30px;
+
+}
+
+#ampm{
+
+font-size:16px;
+
+color:#00ff66;
+
+}
+
+#day{
+
+font-size:17px;
+
+}
+
+#date{
+
+font-size:14px;
+
+}
+
+}
